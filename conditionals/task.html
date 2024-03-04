@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./task.js"></script>
+
+
+    <script>
+        const crops = [
+    {
+        name: "wheat",
+        maturity_time: 10,
+        price_per_bag: 500,
+        family: "Cereal",
+        growth_time: 90
+    },
+    {
+        name: "rice",
+        maturity_time: 15,
+        price_per_bag: 200,
+        family: "Cereal",
+        growth_time: 30
+    },
+    {
+        name: "corn",
+        maturity_time: 20,
+        price_per_bag: 300,
+        family: "Cereal",
+        growth_time: 60
+
+    },
+    {
+        name: "beans",
+        maturity_time: 25,
+        price_per_bag: 200,
+        family: "Legumes",
+        growth_time: 90
+
+    },
+    {
+        name: "peas",
+        maturity_time: 30,
+        price_per_bag: 700,
+        family: "Legumes",
+        growth_time: 120
+    },
+    {
+        name: "carrots",
+        maturity_time: 35,
+        price_per_bag: 100,
+        family: "Vegetables",
+        growth_time: 150
+    }
+
+];
+
+crops.forEach((crop)=>{
+    if(crop.family ==='Legume'){
+        console.log(crop.name);
+    }
+})
+
+crops.forEach((crop)=>{
+    if (crop.maturity_time < 20 && crop.family ==='cereal'){
+        console.log(crop.name);
+    }
+})
+
+console.log("crops that should not be invested in");
+crops.forEach((crop)=>{
+    if(crop.maturity_time > 20 || crop.price_per_bag<450){
+        console.log(crop.name);
+    }
+})
+
+
+
+    </script>
+    
+</body>
+</html>
